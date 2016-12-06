@@ -17,33 +17,6 @@
 
 @end
 
-/*
- 
- 문제 출처
- https://www.acmicpc.net/problem/2438
- 
- 문제
- 첫째 줄에는 별 1개, 둘째 줄에는 별 2개, N번째 줄에는 별 N개를 찍는 문제
- 
- 입력
- 첫째 줄에 N (1<=N<=100)이 주어진다.
- 
- 출력
- 첫째 줄부터 N번째 줄 까지 차례대로 별을 출력한다.
- 
- 예제 입력  복사
- 5
- 
- 예제 출력  복사
- *
- **
- ***
- ****
- *****
- 
- 
- */
-
 @implementation ViewController
 
 
@@ -53,18 +26,36 @@
 }
 - (IBAction)clickButton:(UIButton *)sender {
     NSInteger floorNumberTotal = [textField.text integerValue];
-    
+    // type 1
     if (pyrmidTypeSegment.selectedSegmentIndex == 0) {
-        [self creatPyramid:floorNumberTotal];
+        [self creatPyramidFristType:floorNumberTotal];
     }
+    // type 2
     else {
-        NSLog(@"ing");
+        [self creatPyramidSecondType:floorNumberTotal];
     }
-    
     
 }
 
-- (void)creatPyramid:(NSInteger) floorNumberTotal{
+
+   /****************/
+  /*    type 1    */
+ /****************/
+
+/*
+ 
+ 완성 모양
+ 
+ *
+ **
+ ***
+ ****
+ *****
+ 
+ */
+
+
+- (void)creatPyramidFristType:(NSInteger) floorNumberTotal{
     
     for (NSInteger nowFloor = 1; nowFloor <= floorNumberTotal; nowFloor++) {
         for (NSInteger star = 1; star <= nowFloor; star++) {
@@ -73,6 +64,44 @@
         printf("\n");
     }
 }
+
+
+    /****************/
+   /*    type 2    */
+  /****************/
+
+/*
+ 
+ 완성모양
+
+   *
+  ***
+ *****
+*******
+ 
+temp - star - floor
+     3 - 1 - 1
+     2 - 3 - 2
+     1 - 5 - 3
+     0 - 7 - 4
+ 
+ */
+
+- (void)creatPyramidSecondType:(NSInteger) floorNumberTotal{
+    
+    for (NSInteger nowFloor = 1; nowFloor <= floorNumberTotal; nowFloor++) {
+        
+        for (NSInteger temp = 0; temp <= floorNumberTotal-nowFloor; temp++) {
+            printf("o");
+        }
+        for (NSInteger star = 1; star <= (nowFloor*2-1); star++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
