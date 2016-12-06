@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xBF-Lm-1Df">
+                                <rect key="frame" x="139" y="97" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hGD-ND-G8U"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33l-gT-0Ha">
+                                <rect key="frame" x="164" y="158" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="bvC-MP-geh"/>
+                                    <constraint firstAttribute="height" constant="30" id="eui-pd-nUI"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="STT-VO-c8b"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="정답 화면" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fcw-GZ-TZ9">
+                                <rect key="frame" x="67" y="230" width="240" height="128"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Yin-kS-5oB">
+                                <rect key="frame" x="127" y="28" width="121" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="피라미드 만들기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2q-CZ-ird">
+                                <rect key="frame" x="133" y="68" width="108" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="2S5-Ty-Q4t"/>
+                                    <constraint firstAttribute="width" constant="108" id="Bl3-Xo-ba6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="S2q-CZ-ird" firstAttribute="top" secondItem="Yin-kS-5oB" secondAttribute="bottom" constant="20" id="2SW-X8-Lir"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xBF-Lm-1Df" secondAttribute="trailing" constant="20" id="3Yf-9U-RsD"/>
+                            <constraint firstItem="xBF-Lm-1Df" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="6lB-9f-liu"/>
+                            <constraint firstItem="Fcw-GZ-TZ9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="8Z8-vK-iwX"/>
+                            <constraint firstItem="Yin-kS-5oB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="B8t-A2-QRZ"/>
+                            <constraint firstItem="Fcw-GZ-TZ9" firstAttribute="top" secondItem="33l-gT-0Ha" secondAttribute="bottom" constant="30" id="FC6-8Y-p6i"/>
+                            <constraint firstItem="S2q-CZ-ird" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P0y-QU-oMR"/>
+                            <constraint firstItem="33l-gT-0Ha" firstAttribute="top" secondItem="xBF-Lm-1Df" secondAttribute="bottom" constant="8" id="SET-c3-Fao"/>
+                            <constraint firstItem="Yin-kS-5oB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i9m-Qr-P5c"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fcw-GZ-TZ9" secondAttribute="trailing" constant="20" id="pat-JW-dbv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Fcw-GZ-TZ9" secondAttribute="bottom" constant="20" id="veN-d6-fRq"/>
+                            <constraint firstItem="xBF-Lm-1Df" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="vp5-i2-GwF"/>
+                            <constraint firstItem="33l-gT-0Ha" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wUV-XV-1Jv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pyrmidTypeSegment" destination="Yin-kS-5oB" id="4H9-K4-hJE"/>
+                        <outlet property="textField" destination="xBF-Lm-1Df" id="cb6-o4-E3z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
