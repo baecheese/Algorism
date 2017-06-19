@@ -1,4 +1,4 @@
-# 🖥 Algorism
+# 🖥 Data Structure & Algorism Study 🖥
 
 ## 🌼 Linked List
  - [Linked List](https://github.com/baecheese/Algorism/tree/master/LinkedListTest)
