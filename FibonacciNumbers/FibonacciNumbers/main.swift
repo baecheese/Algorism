@@ -8,7 +8,36 @@
 
 import Foundation
 
-func getFibonacciNumber(index:Int) -> Int {
+// 0 1 2 3 4 5 6 7
+// 0 1 1 2 3 5 8 13 21 ...
+func getFibo(row:Int) -> Int {
+    if 0 == row {
+        return 0
+    }
+    if 2 < row {
+        var temp = 0
+        var front = 1
+        var end = 1
+        for _ in 3...row {
+            temp = front
+            front = end
+            end = temp + front
+        }
+        return end
+        
+    }
+    return 1
+}
+
+
+
+
+
+
+
+
+
+func getFibonacciNumber1(index:Int) -> Int {
     // 0 1 1 2 3 5 8 13 21 ...
     if 0 == index {
         return 0

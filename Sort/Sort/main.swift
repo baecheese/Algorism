@@ -50,5 +50,13 @@ func bulbbleSort(array:[Int]) {
     }
 }
 
+func mergeSort(array:[Int]) {
+    
+}
+
+func merge() {
+    
+}
+
 //print(bulbbleSort(array: [5,3,8,1,2,7]))
 //print(selectionSort(array: [0,3,2,5,7,4,7,546,45,6456,56,346]))

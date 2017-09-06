@@ -1,0 +1,28 @@
+package com.cheesebae.Algorithm.List;
+
+
+public class SimpleNode {
+    int data;
+    SimpleNode next;
+
+    public SimpleNode(int value) {
+        data = value;
+    }
+
+    SimpleNode getSelf() {
+        return SimpleNode.this;
+    }
+
+    int getValue() {
+        return data;
+    }
+
+    SimpleNode getNextNode() {
+        return next;
+    }
+
+    void setNextNode(SimpleNode newNode) {
+        next = newNode;
+    }
+
+}
